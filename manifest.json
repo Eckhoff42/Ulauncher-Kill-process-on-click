@@ -1,6 +1,6 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "Kill process on click",
+  "name": "Kill window on click",
   "description": "Click on the window you want to kill. Cancel by right clicking",
   "developer_name": "Magnus Wiik Eckhoff",
   "icon": "images/icon.png",
@@ -11,7 +11,7 @@
     {
       "id": "k",
       "type": "keyword",
-      "name": "Kill key",
+      "name": "Kill window",
       "description": "Click the window you want to kill. Cancel by right clicking",
       "default_value": "k"
     }

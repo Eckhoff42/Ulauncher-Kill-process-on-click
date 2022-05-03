@@ -1,8 +1,11 @@
 import json
 import logging
 import os
+from pickle import FALSE
+import re
 from time import sleep
 from unicodedata import name
+import nacl
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
@@ -14,10 +17,10 @@ from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 logger = logging.getLogger(__name__)
 
 
-class DemoExtension(Extension):
+class KillOnClick(Extension):
 
     def __init__(self):
-        super(DemoExtension, self).__init__()
+        super(KillOnClick, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
         self.subscribe(ItemEnterEvent, ItemEnterEventListener())
 
@@ -26,13 +29,9 @@ class KeywordQueryEventListener(EventListener):
 
     def on_event(self, event, extension):
         items = []
-        devices = {}
-        logger.info('preferences %s' % json.dumps(extension.preferences))
-
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='Kill process',
-                                         description='Click on the process you want to kill',
-                                         on_enter=ExtensionCustomAction()))
+                                         name="Kill window",
+                                         on_enter=ExtensionCustomAction("kill", keep_app_open=False)))
 
         return RenderResultListAction(items)
 
@@ -44,10 +43,6 @@ class ItemEnterEventListener(EventListener):
         ret = os.system(
             f"bash -c 'xkill'")
 
-        return RenderResultListAction([ExtensionResultItem(icon='images/icon.png',
-                                                           name=prompt,
-                                                           on_enter=HideWindowAction())])
-
 
 if __name__ == '__main__':
-    DemoExtension().run()
+    KillOnClick().run()
