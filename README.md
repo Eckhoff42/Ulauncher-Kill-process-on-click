@@ -1,7 +1,6 @@
 # Kill window on click
 Launch this tool to kill a window by simply clicking it
-
-![kill](https://user-images.githubusercontent.com/42439472/166482159-cb1232ca-29b4-417d-be01-1d3dba02864c.png)
+![kill](https://user-images.githubusercontent.com/42439472/166892902-595fc764-2435-4c06-a76f-40ddc0b270fa.gif)
 
 
 This is a super simple extension simply launching xkill.
