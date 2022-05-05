@@ -11,7 +11,7 @@ This extension is listed on the Ulauncher extensions page.
 ## Settings
 ![settings](https://user-images.githubusercontent.com/42439472/166482182-86c36eac-7151-4e03-8bc2-75e8fed3262e.png)
 
-Change the keyword in under *Bluetooth manager Keyword*
+Change the keyword in under *Kill window Keyword*
 
 
 **N.B.** this extension uses `xkill` to kill processes. 
