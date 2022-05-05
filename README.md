@@ -6,7 +6,7 @@ Launch this tool to kill a window by simply clicking it
 
 This is a super simple extension simply launching xkill.
 
-This extension is listed on the Ulauncher extensions page. 
+This extension is listed on the Ulauncher extensions page. https://ext.ulauncher.io/-/github-eckhoff42-ulauncher-kill-process-on-click
 
 ## Settings
 ![settings](https://user-images.githubusercontent.com/42439472/166482182-86c36eac-7151-4e03-8bc2-75e8fed3262e.png)
